@@ -1,0 +1,104 @@
+:root {
+  /* dark shades of primary color*/
+  /* --clr-primary-1: #9fe2bf; */
+  --clr-primary-2: #65b876;
+  /* --clr-primary-1: #3f784c; */
+  --clr-primary-1: #5b8a8c;
+  /* --clr-primary-1: #37a8b0; */
+  /* --clr-primary-3: #9fe2bf; */
+  --clr-primary-3: white;
+  --clr-primary-4: hsl(42, 63%, 48%);
+  --clr-primary-5: #f7faff;
+  --clr-primary-6: #545d63;
+  /* primary/main color */
+  --clr-background-1: #f0eff4;
+  --clr-white: #fff;
+  --ff-primary: "Roboto", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+  --max-width: 1170px;
+  --bodyFont: Monospace;
+}
+
+/* #33b121 */
+/* #d3ffe9 */
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nuosu SIL", serif;
+  background: var(--clr-white);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  background: var(--clr-primary-5);
+}
+textarea {
+  resize: none;
+}
+
+ul {
+  list-style-type: none;
+}
+button {
+  font-family: "Nuosu SIL", serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.btn {
+  background: var(--clr-primary-1);
+  color: black;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  font-family: "Nuosu SIL", serif;
+}
+
+.full-page {
+  min-height: calc(100vh - 8rem);
+  background: var(--clr-primary-5);
+}
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  transition: var(--transition);
+}
+::-webkit-scrollbar:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7f8280;
+  border-radius: 3rem;
+  transition: var(--transition);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+  border-radius: 3rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: lightgrey;
+}
