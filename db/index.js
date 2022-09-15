@@ -16,6 +16,7 @@ const proConfig = process.env.DATABASE_URL;
 const pool = new Pool({
   connectionString:
     process.env.NODE_ENV === "production" ? proConfig : devConfig,
+  ssl: { rejectUnauthorized: false },
 });
 export default {
   query: (text, params) => pool.query(text, params),
