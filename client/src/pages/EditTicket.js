@@ -76,7 +76,7 @@ const EditTicket = () => {
               type="name"
               value={values.description}
               name="description"
-              onChange={handleChange}
+              handleChange={handleChange}
               className="description-input"
             />
           </div>
@@ -84,21 +84,21 @@ const EditTicket = () => {
             labelText="Severity"
             name="severity"
             value={values.severity}
-            onChange={handleChange}
+            handleChange={handleChange}
             list={ticket_severity_options}
           />
           <FormRowSelect
             labelText="Status"
             name="status"
             value={values.status}
-            onChange={handleChange}
+            handleChange={handleChange}
             list={ticket_status_options}
           />
           <FormRowSelect
             labelText="Type"
             name="type"
             value={values.type}
-            onChange={handleChange}
+            handleChange={handleChange}
             list={ticket_type_options}
           />
         </div>

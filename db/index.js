@@ -18,6 +18,7 @@ const pool = new Pool({
     process.env.NODE_ENV === "production" ? proConfig : devConfig,
   ssl: { rejectUnauthorized: false },
 });
+// const pool = new Pool();
 export default {
   query: (text, params) => pool.query(text, params),
 };
