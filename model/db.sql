@@ -63,8 +63,8 @@ CREATE TABLE ticket_interactions (
 );
 
 
-SELECT * FROM ticket
-SELECT user_name FROM user_account
-JOIN ticket_interactions ON ticket_interactions.ticketid = ticket.id WHERE ticket_interactions.userid = 1;
+-- SELECT * FROM ticket
+-- SELECT user_name FROM user_account
+-- JOIN ticket_interactions ON ticket_interactions.ticketid = ticket.id WHERE ticket_interactions.userid = 1;
 
 

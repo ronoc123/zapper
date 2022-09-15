@@ -11,9 +11,7 @@ const devConfig = {
 
 // const devConfig = `postgresql://${process.env.PGUSER}:${process.env.PGPASSWORD}@${process.env.PGHOST}:`
 
-const proConfig = {
-  connectionString: process.env.DATABASE_URL,
-};
+const proConfig = process.env.DATABASE_URL;
 
 const pool = new Pool({
   connectionString:
