@@ -8,17 +8,17 @@ const SingleProject = ({ title, description, user_name, id }) => {
   return (
     <div className="project">
       <div>{title}</div>
-      <div className="big-screen">{description}</div>
+      <div className="big-screen description">{description}</div>
       <div className="big-screen medium-screen">{user_name}</div>
       <div className="links ticket-links">
-        <Link to={`/project/${id}`} className="details-btn">
+        <Link to={`/project/${id}`} className=" btn-link details-btn">
           Details
         </Link>
-        <Link to={`/editproject/${id}`} className="edit-btn">
+        <Link to={`/editproject/${id}`} className="btn-link edit-btn">
           Edit
         </Link>
         <div
-          className="trash-icon"
+          className=" btn-link trash-icon"
           onClick={() => {
             deleteProject(id);
           }}

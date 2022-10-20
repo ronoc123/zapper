@@ -629,6 +629,7 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       singleProject: action.payload,
+      showAlert: true,
       alertText: "Project Edit Successful",
     };
   }

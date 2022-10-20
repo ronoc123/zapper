@@ -35,9 +35,9 @@ const SingleProjectPage = () => {
         <div className="ticket">
           <div className="ticket-title">Title</div>
           <div className="ticket-description medium">description</div>
-          <div className="ticket-type medium">type</div>
-          <div className="ticket-severity small">severity</div>
-          <div className="ticket-status small">status</div>
+          <div className="ticket-type medium center">type</div>
+          <div className="ticket-severity small center">severity</div>
+          <div className="ticket-status small center">status</div>
           <div className="ticket-devs">Links</div>
         </div>
         {projectTicket.map((project) => {

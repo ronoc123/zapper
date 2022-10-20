@@ -2,7 +2,8 @@ import React from "react";
 
 import { useAppContext } from "../context/appContext";
 import { Link } from "react-router-dom";
-import { BsTrash } from "react-icons/bs";
+import { BsTrash, BsInfoCircle } from "react-icons/bs";
+import { MdOutlineEdit } from "react-icons/md";
 
 const Ticket = ({ title, description, type, severity, status, id }) => {
   const { deleteTicket } = useAppContext();
@@ -11,13 +12,54 @@ const Ticket = ({ title, description, type, severity, status, id }) => {
     <div className="ticket">
       <div className="ticket-title-info">{title}</div>
       <div className="ticket-description-info medium">{description}</div>
-      <div className="ticket-type-info medium">{type}</div>
-      <div className="ticket-severity-info small">{severity}</div>
-      <div className="ticket-status-info small">{status}</div>
+      <div
+        className={`ticket-type-info medium center1 ${
+          type === "security defect" ? "red" : ""
+        }
+        ${type === "functional error" ? "red" : ""}${
+          type === "usability defect" ? "green" : ""
+        }${type === "security defect" ? "red" : ""}${
+          type === "compatibility defect" ? "blue" : ""
+        }${type === "other" ? "grey" : ""}
+        `}
+      >
+        {type}
+      </div>
+      <div
+        className={`ticket-severity-info small center1 ${
+          severity === "low" ? "green" : ""
+        } ${severity === "medium" ? "blue" : ""} ${
+          severity === "high" ? "orange" : ""
+        } ${severity === "critical" ? "red" : ""}`}
+      >
+        {severity}
+      </div>
+      <div
+        className={`ticket-status-info small center1  ${
+          status === "closed" ? "ticket-status-info small grey" : ""
+        } ${status === "open" ? "green" : ""} ${
+          status === "pending" ? "blue" : ""
+        } `}
+      >
+        {status}
+      </div>
       <div className="ticket-links">
-        <Link to={`/singleticket/${id}`}>Info</Link>
-        <Link to={`/editticket/${id}`}>Edit</Link>
-        <BsTrash className="trash-icon" onClick={() => deleteTicket(id)} />
+        <Link to={`/singleticket/${id}`} className="details-btn ticket-link">
+          <span className="icon-align">
+            <BsInfoCircle />
+          </span>
+        </Link>
+        <Link to={`/editticket/${id}`} className="edit-btn ticket-link">
+          <span className="icon-align">
+            <MdOutlineEdit />
+          </span>
+        </Link>
+        <span
+          className="trash-icon ticket-link"
+          onClick={() => deleteTicket(id)}
+        >
+          <BsTrash />
+        </span>
       </div>
     </div>
   );

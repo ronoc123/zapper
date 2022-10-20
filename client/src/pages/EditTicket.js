@@ -1,6 +1,6 @@
 import { useAppContext } from "../context/appContext";
 import FormRow from "../components/FormRow";
-
+import Alert from "../components/Alert";
 import Wrapper from "../assests/wrappers/EditTicket";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -16,6 +16,7 @@ const EditTicket = () => {
     ticket_type_options,
     ticket_severity_options,
     ticket_status_options,
+    showAlert,
   } = useAppContext();
 
   const initialState = {
@@ -63,6 +64,7 @@ const EditTicket = () => {
       <form className="edit-container" onSubmit={onSubmit}>
         <h2 className="title">Edit Ticket</h2>
         <div className="form-container">
+          {showAlert && <Alert />}
           <FormRow
             type="text"
             name="title"
@@ -76,7 +78,7 @@ const EditTicket = () => {
               type="name"
               value={values.description}
               name="description"
-              handleChange={handleChange}
+              onChange={handleChange}
               className="description-input"
             />
           </div>

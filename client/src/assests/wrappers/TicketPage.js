@@ -118,10 +118,23 @@ const Wrapper = styled.div`
   }
   .ticket {
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr 1.5fr;
     padding-left: 1rem;
+    gap: 2rem;
     font-size: 1.2rem;
     border-bottom: 1px solid lightgray;
+    align-items: center;
+    .center1 {
+      font-size: 1rem;
+    }
+  }
+  .center {
+    display: grid;
+    place-items: center;
+  }
+  .center1 {
+    display: grid;
+    place-items: center;
   }
 
   .ticket:nth-child(even) {
@@ -137,26 +150,98 @@ const Wrapper = styled.div`
     font-size: 2rem;
     text-transform: capitalize;
     color: black;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
+  }
+  .ticket-description-info {
+    font-size: 1rem;
   }
   .ticket-links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-self: left;
     column-gap: 1rem;
+    align-items: center;
+  }
+  .ticket-link {
+    padding: 0.4rem;
+    width: 100%;
+
+    /* height: 100%; */
+  }
+  .details-btn {
+    /* background: #cafcd1; */
+    /* color: #004009; */
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .edit-btn {
+    /* background: #fdffcc; */
+    /* color: #8b8000; */
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-weight: 550;
   }
 
   .trash-icon {
-    color: #871109;
-    margin-top: 0.4rem;
-    opacity: 0.7;
+    display: grid;
+    font-size: 1.2rem;
+    place-content: center;
+    /* color: #630a00; */
+    /* background: #ff9f94; */
     cursor: pointer;
     transition: var(--transition);
+    border-radius: 0.2rem;
   }
-  .trash-icon:hover {
-    transform: scale(1.05);
-    color: red;
+  .icon-align {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    font-size: 1.3rem;
   }
+
+  .grey {
+    background: #e3e3e3;
+    /* justify-self: left; */
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .green {
+    background: #d0ffcf;
+    /* justify-self: left; */
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .blue {
+    background: #b3d2ff;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .red {
+    background: #ff9c9c;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .orange {
+    background: #ffecbf;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+
   @media screen and (max-width: 1300px) {
     grid-template-rows: 2rem 20rem auto;
     .input-container {

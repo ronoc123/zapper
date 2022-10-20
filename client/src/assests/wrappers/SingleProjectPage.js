@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 3rem 3fr;
+  /* grid-template-rows: 1fr 3rem 3fr; */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -22,13 +22,17 @@ const Wrapper = styled.div`
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     position: relative;
+    margin-bottom: 1rem;
+    /* border: 2px solid red; */
   }
 
   .ticket-btn {
+    display: grid;
+    place-content: center;
     justify-self: start;
     align-self: center;
     justify-self: end;
-    height: 60%;
+    min-height: 3rem;
     padding-top: 0.1rem;
     width: 30%;
     border-radius: var(--radius);
@@ -45,6 +49,7 @@ const Wrapper = styled.div`
 
   .ticket-container {
     height: 60vh;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     overflow: scroll;
@@ -59,8 +64,24 @@ const Wrapper = styled.div`
   .ticket {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr 1fr 2fr;
+
+    column-gap: 1rem;
     font-size: 1.2rem;
+    align-content: center;
     border-bottom: 1px solid lightgray;
+    padding-left: 0.5rem;
+    .center1 {
+      font-size: 1rem;
+    }
+  }
+
+  .center {
+    display: grid;
+    place-items: center;
+  }
+  .center1 {
+    display: grid;
+    place-items: center;
   }
   .title {
     display: grid;
@@ -87,47 +108,111 @@ const Wrapper = styled.div`
   .ticket-severity,
   .ticket-status,
   .ticket-devs {
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-transform: capitalize;
     color: black;
-    border-bottom: 1px solid black;
   }
   .project-creator {
     display: grid;
-    /* grid-template-columns: 1fr; */
-    /* grid-template-rows: 0.75fr 1fr 1fr; */
   }
 
   .add-dev {
     position: absolute;
-    right: 0.2rem;
-    bottom: 0.2rem;
+    right: 0.3rem;
+    bottom: 0.3rem;
     justify-self: end;
-    background: var(--clr-primary-3);
-    border: 1px solid grey;
-    font-size: 0.7rem;
-    transition: var(--transition);
-  }
-
-  .add-dev:hover {
-    font-size: 0.75rem;
-  }
-  .trash-icon {
-    color: #871109;
-    margin-top: 0.5rem;
-    opacity: 0.7;
-    cursor: pointer;
-    transition: var(--transition);
-  }
-  .trash-icon:hover {
-    transform: scale(1.05);
-    color: red;
+    background: #bffcbb;
+    color: #2a5428;
+    font-weight: 600;
+    font-size: 0.8rem;
   }
   .ticket-links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-self: left;
-    column-gap: 1rem;
+    width: 50%;
+  }
+  .ticket-link {
+    display: grid;
+    place-content: center;
+    /* text-align: center; */
+  }
+
+  .grey {
+    background: #e3e3e3;
+    /* justify-self: left; */
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .green {
+    background: #d0ffcf;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .blue {
+    background: #b3d2ff;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .red {
+    background: #ff9c9c;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+  .orange {
+    background: #ffecbf;
+    /* justify-self: left; */
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: black;
+    text-transform: capitalize;
+  }
+
+  /* .ticket-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1rem;
+    place-items: center;
+    width: 100%;
+    border: 2px solid red;
+  } */
+
+  /* .details-btn {
+    background: #cafcd1;
+    width: 70%;
+    height: 1.55rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .edit-btn {
+    width: 70%;
+    height: 1.55rem;
+    background: #fdffcc;
+    border-radius: 0.2rem;
+    font-weight: 550;
+    text-align: center;
+  }
+  .icon-align {
+    display: grid;
+    place-items: center;
+  }
+*/
+
+  .trash-icon {
+    cursor: pointer;
   }
 
   @media screen and (max-width: 1400px) {
@@ -182,6 +267,11 @@ const Wrapper = styled.div`
     }
     .ticket {
       grid-template-columns: 1fr 1fr;
+    }
+    .ticket-link {
+      font-size: 1.2rem;
+      display: grid;
+      place-content: center;
     }
   }
 `;
