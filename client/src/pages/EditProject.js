@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import Alert from "../components/Alert";
+import ContainedButtons from "../components/Button";
 
 const EditProject = () => {
   const { fetchSingleProject, singleProject, displayAlert, editProjectInfo } =
@@ -68,8 +69,8 @@ const EditProject = () => {
           </div>
         </div>
         <div className="btn-container">
-          <button className="edit-btn" type="submit">
-            Save Changes
+          <button className="position" type="submit">
+            <ContainedButtons name={"Edit Project"}></ContainedButtons>
           </button>
         </div>
       </form>

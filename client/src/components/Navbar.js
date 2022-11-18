@@ -6,6 +6,7 @@ import { useAppContext } from "../context/appContext.js";
 import { FaUserCircle, FaBars } from "react-icons/fa";
 import { BsFillBellFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import ContainedButtons from "../components/Button";
 
 const Navbar = () => {
   const { user, logoutUser, openSidebar, closeSidebar, isSidebarOpen } =
@@ -32,8 +33,8 @@ const Navbar = () => {
           <FaUserCircle className="icon-1" />
           <div className="name">{user[0]?.user_name || "User"}</div>
         </Link>
-        <button type="button" className="btn logout-btn" onClick={logoutUser}>
-          Logout
+        <button type="button" className="position" onClick={logoutUser}>
+          <ContainedButtons name={"Logout"}></ContainedButtons>
         </button>
       </div>
       {/* USER INFO END */}

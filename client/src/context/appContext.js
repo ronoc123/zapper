@@ -308,6 +308,7 @@ const AppProvider = ({ children }) => {
 
   const deleteProject = async (id) => {
     dispatch({ type: DELETE_PROJECT_BEGIN });
+    console.log(id);
     let url = `/project/${id}`;
     try {
       await authFetch.delete(url);

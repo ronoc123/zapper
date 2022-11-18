@@ -2,6 +2,8 @@ import React from "react";
 import { useAppContext } from "../context/appContext";
 import { Link } from "react-router-dom";
 import SingleDev from "./SingleDev";
+import ContainedButtons from "./Button";
+
 const Project = () => {
   const { singleProject, devOnProject, user } = useAppContext();
 
@@ -24,11 +26,8 @@ const Project = () => {
               return <SingleDev key={index} value={dev} />;
             })}
           </div>
-          <Link
-            to={`/projectdev/${singleProject[0]?.id}`}
-            className="btn add-dev"
-          >
-            Add developer
+          <Link to={`/projectdev/${singleProject[0]?.id}`} className="add-dev">
+            <ContainedButtons name={"Add Developer"}></ContainedButtons>
           </Link>
         </div>
       </div>

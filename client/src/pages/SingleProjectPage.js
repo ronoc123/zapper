@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import { useAppContext } from "../context/appContext.js";
 import { useEffect } from "react";
 import Project from "../components/Project.js";
+import ContainedButtons from "../components/Button.js";
 
 const SingleProjectPage = () => {
   let { id } = useParams();
@@ -27,8 +28,8 @@ const SingleProjectPage = () => {
       <Project />
       <div className="title-1">
         <h1 className="title-text">Tickets on {singleProject[0]?.title}</h1>
-        <Link to={`/addticket/${id}`} className="ticket-btn">
-          Add Ticket
+        <Link to={`/addticket/${id}`} className="position">
+          <ContainedButtons name={"Add Ticket"}></ContainedButtons>
         </Link>
       </div>
       <div className="ticket-container">

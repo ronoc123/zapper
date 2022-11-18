@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import FormRowSelect from "../components/FormRowSelect";
+import ContainedButtons from "../components/Button";
 
 const EditTicket = () => {
   const {
@@ -105,8 +106,8 @@ const EditTicket = () => {
           />
         </div>
         <div className="btn-container">
-          <button className="edit-btn" type="submit">
-            Save Changes
+          <button className="position" type="submit">
+            <ContainedButtons name={"Edit Ticket"}></ContainedButtons>
           </button>
         </div>
       </form>

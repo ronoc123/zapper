@@ -2,6 +2,8 @@ import Wrapper from "../assests/wrappers/AddProject.js";
 import Alert from "../components/Alert.js";
 import FormRow from "../components/FormRow.js";
 import { useAppContext } from "../context/appContext.js";
+import ContainedButtons from "../components/Button";
+
 const AddProject = () => {
   const {
     createProject,
@@ -52,8 +54,8 @@ const AddProject = () => {
               className="form-input description"
             />
           </div>
-          <button type="submit" className="btn create-btn">
-            Submit
+          <button className="position" type="submit">
+            <ContainedButtons name={"New Project"}></ContainedButtons>
           </button>
         </div>
       </form>

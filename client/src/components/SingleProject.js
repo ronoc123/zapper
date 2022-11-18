@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useAppContext } from "../context/appContext";
 import { BsTrash } from "react-icons/bs";
+import ContainedButtons from "./Button";
 
 const SingleProject = ({ title, description, user_name, id }) => {
   const { deleteProject } = useAppContext();

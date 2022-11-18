@@ -1,15 +1,9 @@
 import styled from "styled-components";
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3rem 10rem auto;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
   padding-bottom: 0.5rem;
-
   .title-search {
     text-align: left;
     padding-left: 2rem;
@@ -20,14 +14,9 @@ const Wrapper = styled.div`
     background: var(--clr-primary-3);
     display: grid;
     grid-template-rows: 1fr 2fr;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    margin-bottom: 1rem;
+    padding: 2rem;
+    padding-left: 0rem;
     box-shadow: var(--dark-shadow);
-    width: 100%;
-    height: 70%;
-    justify-self: center;
   }
   .clear-btn {
     align-self: end;
@@ -38,7 +27,9 @@ const Wrapper = styled.div`
     color: #871109;
     cursor: pointer;
   }
-
+  .no-tickets {
+    text-align: center;
+  }
   .search-btn {
     align-self: end;
     height: 2rem;
@@ -70,6 +61,10 @@ const Wrapper = styled.div`
     grid-template-rows: 1fr 0.5fr;
     text-align: left;
     margin-left: 2rem;
+  }
+  .form-input {
+    height: 2rem;
+    width: 100%;
   }
 
   .form-label {
@@ -110,10 +105,10 @@ const Wrapper = styled.div`
     overflow: scroll;
     overflow-x: hidden;
     grid-auto-rows: 4rem;
-    max-height: 32rem;
+    max-height: 60%;
     text-align: start;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
-    border-top: 4px solid black;
+    border-top: 1px solid black;
     background: white;
   }
   .ticket {
@@ -135,6 +130,11 @@ const Wrapper = styled.div`
   .center1 {
     display: grid;
     place-items: center;
+  }
+
+  .form-select {
+    height: 2rem;
+    width: 100%;
   }
 
   .ticket:nth-child(even) {
@@ -243,7 +243,8 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 1300px) {
-    grid-template-rows: 2rem 20rem auto;
+    margin-left: 4rem;
+    margin-right: 4rem;
     .input-container {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
@@ -256,7 +257,8 @@ const Wrapper = styled.div`
     }
   }
   @media screen and (max-width: 700px) {
-    grid-template-rows: 2rem 20rem auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
     .input-container {
       grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
@@ -266,6 +268,10 @@ const Wrapper = styled.div`
     }
     .ticket {
       grid-template-columns: 1fr 1fr;
+    }
+    .input-container {
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
     }
   }
 `;

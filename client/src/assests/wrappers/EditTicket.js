@@ -26,6 +26,12 @@ const Wrapper = styled.div`
   .alert {
     text-align: center;
   }
+  .position {
+    justify-self: center;
+    align-self: center;
+    border: none;
+    margin-bottom: 1rem;
+  }
   .form-row {
     display: grid;
     grid-template-columns: 1fr;

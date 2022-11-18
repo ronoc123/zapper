@@ -1,14 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  display: grid;
+  margin-left: 10rem;
+  margin-right: 10rem;
   grid-template-columns: 1fr;
-  /* grid-template-rows: 1fr 3rem 3fr; */
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  margin-left: 4rem;
-  margin-right: 4rem;
   padding-bottom: 2rem;
   .project-container {
     text-align: left;
@@ -48,7 +44,7 @@ const Wrapper = styled.div`
   }
 
   .ticket-container {
-    height: 60vh;
+    /* height: 60vh; */
     margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -60,11 +56,11 @@ const Wrapper = styled.div`
     border-top: 4px solid black;
     background: white;
     max-height: 35rem;
+    width: 100%;
   }
   .ticket {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr 1fr 1fr 2fr;
-
     column-gap: 1rem;
     font-size: 1.2rem;
     align-content: center;
@@ -73,6 +69,10 @@ const Wrapper = styled.div`
     .center1 {
       font-size: 1rem;
     }
+  }
+  .position {
+    justify-self: right;
+    align-self: center;
   }
 
   .center {
@@ -124,7 +124,6 @@ const Wrapper = styled.div`
     background: #bffcbb;
     color: #2a5428;
     font-weight: 600;
-    font-size: 0.8rem;
   }
   .ticket-links {
     display: grid;
@@ -149,7 +148,7 @@ const Wrapper = styled.div`
   .green {
     background: #d0ffcf;
     /* justify-self: left; */
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
@@ -157,7 +156,7 @@ const Wrapper = styled.div`
   .blue {
     background: #b3d2ff;
     /* justify-self: left; */
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
@@ -165,7 +164,7 @@ const Wrapper = styled.div`
   .red {
     background: #ff9c9c;
     /* justify-self: left; */
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
@@ -173,54 +172,24 @@ const Wrapper = styled.div`
   .orange {
     background: #ffecbf;
     /* justify-self: left; */
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
   }
-
-  /* .ticket-links {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    font-size: 1rem;
-    place-items: center;
-    width: 100%;
-    border: 2px solid red;
-  } */
-
-  /* .details-btn {
-    background: #cafcd1;
-    width: 70%;
-    height: 1.55rem;
-    text-align: center;
-    border-radius: 0.2rem;
-    font-size: 1rem;
-    font-weight: 500;
-  }
-  .edit-btn {
-    width: 70%;
-    height: 1.55rem;
-    background: #fdffcc;
-    border-radius: 0.2rem;
-    font-weight: 550;
-    text-align: center;
-  }
-  .icon-align {
-    display: grid;
-    place-items: center;
-  }
-*/
 
   .trash-icon {
     cursor: pointer;
   }
 
   @media screen and (max-width: 1400px) {
-    grid-template-rows: 1fr 7rem auto;
     .project-container {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 3fr;
-      height: 20rem;
+      min-height: 20rem;
+      width: 100%;
+
+      margin-right: 4rem;
     }
     .title {
       align-self: flex-end;
@@ -240,7 +209,8 @@ const Wrapper = styled.div`
   }
 
   @media screen and (max-width: 1000px) {
-    grid-template-rows: 1fr 7rem auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     .ticket-btn {
       width: 50%;
       height: 2rem;
@@ -254,6 +224,8 @@ const Wrapper = styled.div`
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 3fr;
       height: 20rem;
+
+      margin-right: 1rem;
     }
     .title {
       align-self: flex-end;

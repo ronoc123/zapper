@@ -1,27 +1,23 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  row-gap: 1rem;
-  /* grid-template-rows: 1fr 6rem auto; */
+  margin-left: 10rem;
+  margin-right: 10rem;
   .project-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    width: 70vw;
     gap: 2rem;
-    justify-self: center;
     margin-bottom: 5rem;
   }
   .main-title {
     text-align: center;
     font-size: 3rem;
+    margin-bottom: 1rem;
   }
   .project {
     height: 25rem;
     background: white;
     box-shadow: var(--dark-shadow);
-    /* border-bottom: 5px solid black; */
     color: #232b2b;
     transition: var(--transition);
     display: grid;
@@ -65,13 +61,10 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-left: 5rem;
-    margin-right: 5rem;
     margin-bottom: 1rem;
     gap: 2rem;
     margin-top: 2rem;
     justify-self: center;
-    width: 70vw;
   }
   .stat-title {
     justify-self: start;
@@ -157,9 +150,9 @@ const Wrapper = styled.div`
     position: absolute;
     display: grid;
     align-items: center;
-    top: 25%;
-    right: 30%;
-    /* border: 2px solid red; */
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
     text-align: center;
     font-size: 1.3rem;
     background: #3b444b;
@@ -186,30 +179,25 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1800px) {
     .project-container {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       row-gap: 2rem;
     }
     .stats-container {
       display: grid;
       grid-template-columns: 1fr;
-      width: 60vw;
       font-size: 0.4rem;
-      grid-column-gap: 0rem;
       justify-self: center;
-      margin-left: 0rem;
-      margin-right: 0rem;
       font-size: 1rem;
-    }
-    .project-title {
-      top: 25%;
-      right: 37%;
     }
   }
 
   @media screen and (max-width: 1400px) {
-    .project-title {
-      top: 25%;
-      right: 30%;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    .project-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 2rem;
     }
   }
 
@@ -221,25 +209,17 @@ const Wrapper = styled.div`
     .stats-container {
       display: grid;
       grid-template-columns: 1fr;
-      width: 60vw;
+      /* width: 60vw; */
       font-size: 0.7rem;
       grid-column-gap: 0rem;
       justify-self: center;
-      margin-left: 0rem;
-      margin-right: 0rem;
       min-width: 22rem;
-    }
-    .project-title {
-      top: 25%;
-      right: 35%;
     }
   }
 
   @media screen and (max-width: 700px) {
-    .project-title {
-      top: 25%;
-      right: 30%;
-    }
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 `;
 

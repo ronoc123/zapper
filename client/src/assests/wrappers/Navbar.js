@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.nav`
   height: 7rem;
   display: grid;
-  grid-template-columns: 1.2fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   background: var(--clr-primary-3);
   padding-left: 3rem;
   margin-bottom: 1rem;
@@ -14,6 +14,11 @@ const Wrapper = styled.nav`
     align-items: center;
     justify-content: flex-start;
     padding-left: 2rem;
+  }
+  .position {
+    margin-right: 1rem;
+    justify-self: right;
+    border: none;
   }
 
   span {

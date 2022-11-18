@@ -55,6 +55,12 @@ const Wrapper = styled.div`
     font-size: 1.3rem;
     transition: var(--transition);
   }
+  .position {
+    justify-self: center;
+    align-self: center;
+    border: none;
+    margin-bottom: 1rem;
+  }
 
   .create-btn:hover {
     background: var(--clr-primary-1);

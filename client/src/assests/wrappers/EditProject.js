@@ -40,6 +40,12 @@ const Wrapper = styled.div`
   .edit-btn:hover {
     transform: scale(1.05);
   }
+  .position {
+    justify-self: center;
+    align-self: center;
+    border: none;
+    margin-bottom: 1rem;
+  }
   .form-row {
     display: grid;
     grid-template-columns: 1fr;

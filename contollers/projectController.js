@@ -59,6 +59,7 @@ const editProject = async (req, res) => {
 
 const deleteProject = async (req, res) => {
   const { id } = req.params;
+
   const { id: user_id } = req.user.user;
 
   const testId = await db.query("SELECT createdby FROM project WHERE id = $1", [
@@ -69,10 +70,10 @@ const deleteProject = async (req, res) => {
     "SELECT id FROM ticket WHERE project_id = $1",
     [id]
   );
-  console.log(ticketDelete.rows);
+
   if (
     req.user.user.user_role !== "admin" &&
-    testId.rows[0].createdby !== user_id
+    testId.rows[0].createdby != user_id
   ) {
     throw new UnauthenticatedError("You did not create this project!");
   }
@@ -87,7 +88,7 @@ const deleteProject = async (req, res) => {
   await db.query("DELETE FROM ticket WHERE project_id = $1", [id]);
   await db.query("DELETE FROM project WHERE id = $1", [id]);
 
-  res.status(StatusCodes.OK).send("Project Deleted!");
+  res.status(StatusCodes.OK).send("roject Deleted!");
 };
 
 const getDevsOnProject = async (req, res) => {

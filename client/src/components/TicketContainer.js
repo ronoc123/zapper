@@ -32,10 +32,14 @@ const TicketContainer = () => {
         <div className="ticket-status small center">status</div>
         <div className="ticket-dev">Links</div>
       </div>
-      {myTickets.map((ticket) => {
-        const { id } = ticket;
-        return <Ticket key={id} {...ticket} />;
-      })}
+      {myTickets.length > 0 ? (
+        myTickets.map((ticket) => {
+          const { id } = ticket;
+          return <Ticket key={id} {...ticket} />;
+        })
+      ) : (
+        <h1 className="no-tickets">No Tickets...</h1>
+      )}
     </div>
   );
 };
