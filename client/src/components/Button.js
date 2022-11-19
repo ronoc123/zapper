@@ -16,11 +16,11 @@ const theme = createTheme({
   },
 });
 
-export default function ContainedButtons({ name }) {
+export default function ContainedButtons({ name, func }) {
   return (
     <ThemeProvider theme={theme}>
       <Stack direction="row" spacing={2}>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={func}>
           {name}
         </Button>
       </Stack>

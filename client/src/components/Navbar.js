@@ -33,9 +33,12 @@ const Navbar = () => {
           <FaUserCircle className="icon-1" />
           <div className="name">{user[0]?.user_name || "User"}</div>
         </Link>
-        <button type="button" className="position" onClick={logoutUser}>
-          <ContainedButtons name={"Logout"}></ContainedButtons>
-        </button>
+        <div className="position">
+          <ContainedButtons
+            name={"Logout"}
+            func={logoutUser}
+          ></ContainedButtons>
+        </div>
       </div>
       {/* USER INFO END */}
     </Wrapper>

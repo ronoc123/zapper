@@ -32,7 +32,7 @@ const AddProject = () => {
 
   return (
     <Wrapper className="full-page">
-      <form className="form-container" onSubmit={onSubmit}>
+      <form className="form-container">
         <h1 className="title">New Project!</h1>
         {showAlert && <Alert />}
         <div className="input-container">
@@ -54,9 +54,12 @@ const AddProject = () => {
               className="form-input description"
             />
           </div>
-          <button className="position" type="submit">
-            <ContainedButtons name={"New Project"}></ContainedButtons>
-          </button>
+          <div className="position">
+            <ContainedButtons
+              name={"New Project"}
+              func={onSubmit}
+            ></ContainedButtons>
+          </div>
         </div>
       </form>
     </Wrapper>
