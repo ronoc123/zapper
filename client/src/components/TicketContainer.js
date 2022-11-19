@@ -1,9 +1,16 @@
 import React from "react";
 import { useAppContext } from "../context/appContext";
 import Ticket from "../components/Ticket.js";
+import { useEffect } from "react";
 
 const TicketContainer = () => {
-  const { myTickets, searchForm, filtered_tickets } = useAppContext();
+  const { myTickets, searchForm, filtered_tickets, getMyTickets } =
+    useAppContext();
+
+  useEffect(() => {
+    getMyTickets();
+  }, []);
+
   if (searchForm) {
     return (
       <div className="ticket-container">

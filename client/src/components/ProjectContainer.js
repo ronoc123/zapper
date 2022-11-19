@@ -7,7 +7,6 @@ const ProjectContainer = () => {
 
   useEffect(() => {
     fetchProjects();
-    // eslint-disable-next-line
   }, []);
   return (
     <div className="project-container">
@@ -17,11 +16,15 @@ const ProjectContainer = () => {
         <div className="project-creator big-screen medium-screen">creator</div>
         <div className="project-links">links</div>
       </div>
-      {projects.map((project) => {
-        const { id } = project;
+      {projects.length > 0 ? (
+        projects.map((project) => {
+          const { id } = project;
 
-        return <SingleProject key={id} {...project} />;
-      })}
+          return <SingleProject key={id} {...project} />;
+        })
+      ) : (
+        <h1 className="heading-title">No Projects...</h1>
+      )}
     </div>
   );
 };

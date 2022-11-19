@@ -5,11 +5,12 @@ import SearchContainer from "../components/SearchContainer.js";
 import TicketContainer from "../components/TicketContainer.js";
 
 const MyTickets = () => {
-  const { getMyTickets } = useAppContext();
+  const { getMyTickets, myTickets } = useAppContext();
 
-  useEffect(() => {
-    getMyTickets();
-  }, []);
+  // useEffect(() => {
+  //   getMyTickets();
+  // }, []);
+
   return (
     <Wrapper className="full-page">
       <div className="heading">

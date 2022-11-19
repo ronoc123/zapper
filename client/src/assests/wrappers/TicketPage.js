@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 
   .search-container {
     background: var(--clr-primary-3);
+    border-top: 3px solid black;
     display: grid;
     grid-template-rows: 1fr 2fr;
     padding: 2rem;
@@ -210,25 +211,23 @@ const Wrapper = styled.div`
   }
   .green {
     background: #d0ffcf;
-    /* justify-self: left; */
-    padding: 0.5rem;
 
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
   }
   .blue {
     background: #b3d2ff;
-    /* justify-self: left; */
-    padding: 0.5rem;
+
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
   }
   .red {
     background: #ff9c9c;
-    /* justify-self: left; */
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;
@@ -236,7 +235,7 @@ const Wrapper = styled.div`
   .orange {
     background: #ffecbf;
     /* justify-self: left; */
-    padding: 0.5rem;
+    padding: 0.3rem;
     border-radius: 0.5rem;
     color: black;
     text-transform: capitalize;

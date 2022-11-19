@@ -27,6 +27,9 @@ const Wrapper = styled.div`
   .description {
     font-size: 1rem;
   }
+  .heading-title {
+    text-align: center;
+  }
 
   .project-container {
     background: white;

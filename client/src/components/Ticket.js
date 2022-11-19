@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useAppContext } from "../context/appContext";
 import { Link } from "react-router-dom";
 import { BsTrash, BsInfoCircle } from "react-icons/bs";
 import { MdOutlineEdit } from "react-icons/md";
 
-const Ticket = ({ title, description, type, severity, status, id }) => {
-  const { deleteTicket } = useAppContext();
+const Ticket = ({ title, description, type, severity, status, id, remove }) => {
+  const { deleteTicket, getMyTickets } = useAppContext();
+
+  function renewTickets(i) {
+    deleteTicket(i);
+    getMyTickets();
+  }
 
   return (
     <div className="ticket">
@@ -56,7 +61,7 @@ const Ticket = ({ title, description, type, severity, status, id }) => {
         </Link>
         <span
           className="trash-icon ticket-link"
-          onClick={() => deleteTicket(id)}
+          onClick={() => renewTickets(id)}
         >
           <BsTrash />
         </span>

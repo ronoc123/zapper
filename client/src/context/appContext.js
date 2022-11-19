@@ -329,6 +329,7 @@ const AppProvider = ({ children }) => {
       await authFetch.delete(url);
       dispatch({ type: DELETE_TICKET_SUCCESS });
       fetchTicketsOnProject(singleProject[0].id);
+      console.log("howdy");
       clearAlert();
     } catch (error) {
       dispatch({ type: DELETE_TICKET_ERROR });
