@@ -2,7 +2,7 @@ import Wrapper from "../assests/wrappers/AddTicket.js";
 import Alert from "../components/Alert.js";
 import FormRow from "../components/FormRow.js";
 import { useAppContext } from "../context/appContext.js";
-
+import ContainedButtons from "../components/Button.js";
 import FormRowSelect from "../components/FormRowSelect.js";
 import { useParams } from "react-router-dom";
 
@@ -89,9 +89,12 @@ const AddTicket = () => {
             handleChange={handleTicketInput}
             list={ticket_type_options}
           />
-          <button type="submit" className="btn create-btn">
-            Submit
-          </button>
+          <div type="submit" className="position">
+            <ContainedButtons
+              name={"Add Ticket"}
+              styled={"small"}
+            ></ContainedButtons>
+          </div>
         </div>
       </form>
     </Wrapper>

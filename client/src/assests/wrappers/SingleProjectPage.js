@@ -74,7 +74,10 @@ const Wrapper = styled.div`
     justify-self: right;
     align-self: center;
   }
-
+  .no-title {
+    text-align: center;
+    margin-top: 0.5rem;
+  }
   .center {
     display: grid;
     place-items: center;
@@ -180,6 +183,7 @@ const Wrapper = styled.div`
 
   .trash-icon {
     cursor: pointer;
+    padding-bottom: 0.5rem;
   }
 
   @media screen and (max-width: 1400px) {

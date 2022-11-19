@@ -15,10 +15,10 @@ const Navbar = () => {
   return (
     <Wrapper>
       {/* LOGO */}
-      <div className="center">
+      <Link to={"/"} className="center">
         <Logo />
         <span>Zapper</span>
-      </div>
+      </Link>
       {/* LOGO END */}
       {/* NAV LINKS */}
       <NavLinks className="big-screen" />

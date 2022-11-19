@@ -13,14 +13,23 @@ const theme = createTheme({
       // This is green.A700 as hex.
       main: "#11cb5f",
     },
+    third: {
+      // This is green.A700 as hex.
+      main: "#11cb5f",
+    },
   },
 });
 
-export default function ContainedButtons({ name, func }) {
+export default function ContainedButtons({ name, func, styled }) {
   return (
     <ThemeProvider theme={theme}>
       <Stack direction="row" spacing={2}>
-        <Button variant="contained" color="primary" onClick={func}>
+        <Button
+          variant="contained"
+          color="primary"
+          size={styled ? styled : "medium"}
+          onClick={func}
+        >
           {name}
         </Button>
       </Stack>

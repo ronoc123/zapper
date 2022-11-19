@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-  margin-left: 10rem;
-  margin-right: 10rem;
+  /* margin-left: 15rem; */
+  /* margin-right: 15rem; */
+  display: grid;
+
   .project-container {
+    width: 80%;
+    max-width: 100rem;
+    justify-self: center;
     display: grid;
+
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    gap: 4rem;
     margin-bottom: 5rem;
   }
   .main-title {
@@ -15,7 +21,8 @@ const Wrapper = styled.div`
     margin-bottom: 1rem;
   }
   .project {
-    height: 25rem;
+    min-height: 20rem;
+    min-width: 17rem;
     background: white;
     box-shadow: var(--dark-shadow);
     color: #232b2b;
@@ -39,11 +46,11 @@ const Wrapper = styled.div`
     align-items: center;
     color: #377523;
     background: #d6ffc9;
-    width: 10rem;
     text-align: center;
-    height: 4rem;
     border-radius: 0.5rem;
     font-size: 1.2rem;
+
+    padding: 1rem;
   }
   .project-link-all {
     display: grid;
@@ -51,16 +58,16 @@ const Wrapper = styled.div`
     background: #fdffcc;
     color: #8b8000;
     font-size: 1.2rem;
-    width: 10rem;
     text-align: center;
-    height: 4rem;
     border-radius: 0.5rem;
   }
 
   .stats-container {
+    width: 80%;
+    justify-self: center;
+    max-width: 100rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
     margin-bottom: 1rem;
     gap: 2rem;
     margin-top: 2rem;
@@ -141,9 +148,8 @@ const Wrapper = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    justify-self: center;
-    column-gap: 3rem;
-    padding: 0.5rem;
+    column-gap: 4rem;
+    padding: 2rem;
   }
 
   .project-title {
@@ -179,25 +185,22 @@ const Wrapper = styled.div`
   @media screen and (max-width: 1800px) {
     .project-container {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       row-gap: 2rem;
-    }
-    .stats-container {
-      display: grid;
-      grid-template-columns: 1fr;
-      font-size: 0.4rem;
-      justify-self: center;
-      font-size: 1rem;
     }
   }
 
   @media screen and (max-width: 1400px) {
-    margin-left: 4rem;
-    margin-right: 4rem;
     .project-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       row-gap: 2rem;
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .stats-container {
+      display: grid;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -209,17 +212,14 @@ const Wrapper = styled.div`
     .stats-container {
       display: grid;
       grid-template-columns: 1fr;
-      /* width: 60vw; */
       font-size: 0.7rem;
       grid-column-gap: 0rem;
       justify-self: center;
-      min-width: 22rem;
+      /* min-width: 22rem; */
     }
   }
 
   @media screen and (max-width: 700px) {
-    margin-left: 2rem;
-    margin-right: 2rem;
   }
 `;
 

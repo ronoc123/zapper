@@ -65,6 +65,9 @@ const Wrapper = styled.div`
   .alert {
     text-align: center;
   }
+  .position {
+    justify-self: center;
+  }
 `;
 
 export default Wrapper;

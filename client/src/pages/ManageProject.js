@@ -12,7 +12,10 @@ const ManageProject = () => {
       <div className="heading-container">
         <h1 className="title">Projects</h1>
         <Link to="/addproject" className="position">
-          <ContainedButtons name={"Add Project"}></ContainedButtons>
+          <ContainedButtons
+            name={"Add Project"}
+            styled={"large"}
+          ></ContainedButtons>
         </Link>
       </div>
       {showAlert && <Alert />}

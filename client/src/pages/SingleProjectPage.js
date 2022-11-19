@@ -29,7 +29,10 @@ const SingleProjectPage = () => {
       <div className="title-1">
         <h1 className="title-text">Tickets on {singleProject[0]?.title}</h1>
         <Link to={`/addticket/${id}`} className="position">
-          <ContainedButtons name={"Add Ticket"}></ContainedButtons>
+          <ContainedButtons
+            name={"Add Ticket"}
+            styled={"large"}
+          ></ContainedButtons>
         </Link>
       </div>
       <div className="ticket-container">
@@ -41,10 +44,14 @@ const SingleProjectPage = () => {
           <div className="ticket-status small center">status</div>
           <div className="ticket-devs">Links</div>
         </div>
-        {projectTicket.map((project) => {
-          const { id } = project;
-          return <Ticket key={id} {...project} />;
-        })}
+        {projectTicket.length > 0 ? (
+          projectTicket.map((project) => {
+            const { id } = project;
+            return <Ticket key={id} {...project} />;
+          })
+        ) : (
+          <h1 className="no-title">No Tickets...</h1>
+        )}
       </div>
     </Wrapper>
   );

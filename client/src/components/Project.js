@@ -27,7 +27,10 @@ const Project = () => {
             })}
           </div>
           <Link to={`/projectdev/${singleProject[0]?.id}`} className="add-dev">
-            <ContainedButtons name={"Add Developer"}></ContainedButtons>
+            <ContainedButtons
+              name={"Add Developer"}
+              styled={"small"}
+            ></ContainedButtons>
           </Link>
         </div>
       </div>

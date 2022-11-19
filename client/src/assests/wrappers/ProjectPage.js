@@ -29,13 +29,13 @@ const Wrapper = styled.div`
   }
   .heading-title {
     text-align: center;
+    margin-top: 0.5rem;
   }
 
   .project-container {
     background: white;
     max-height: 80%;
     align-self: flex-start;
-    /* max-width: 80%; */
     justify-self: center;
     display: grid;
     overflow: scroll;

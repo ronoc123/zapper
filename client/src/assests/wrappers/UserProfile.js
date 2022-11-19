@@ -7,10 +7,9 @@ const Wrapper = styled.div`
 
   .form-container {
     display: grid;
-    width: 30vw;
-    height: 60%;
-    min-width: 400px;
-    grid-template-rows: 1fr 6fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    grid-template-rows: 1fr;
     background: white;
     border-radius: var(--radius);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
@@ -48,6 +47,7 @@ const Wrapper = styled.div`
     font-size: 1.2rem;
     transition: var(--transition);
     padding-bottom: 0.7rem;
+    margin-bottom: 4rem;
   }
 
   .submit-btn:hover {

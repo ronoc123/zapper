@@ -30,6 +30,7 @@ const Wrapper = styled.div`
   }
   .no-tickets {
     text-align: center;
+    margin-top: 0.5rem;
   }
   .search-btn {
     align-self: end;

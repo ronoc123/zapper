@@ -8,7 +8,6 @@ import Alert from "../components/Alert";
 
 const ManageRole = () => {
   const {
-    // addToProject,
     fetchUsers,
     handleChange,
     searchDev,
@@ -17,9 +16,6 @@ const ManageRole = () => {
     projectDevOptions,
     fetchSingleUser,
     adminEdit,
-    // addDevToProject,
-    // getDevsOnSingleProject,
-    // devOnSingleProject,
     updateUserInformation,
     displayAlert,
   } = useAppContext();
