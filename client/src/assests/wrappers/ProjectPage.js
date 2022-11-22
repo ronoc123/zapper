@@ -92,10 +92,11 @@ const Wrapper = styled.div`
   }
   .edit-btn {
     background: #fdffcc;
-
+    cursor: pointer;
     border-radius: 0.2rem;
     font-size: 1rem;
     font-weight: 550;
+    text-transform: capitalize;
   }
 
   .trash-icon {

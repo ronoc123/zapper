@@ -21,7 +21,6 @@ const Wrapper = styled.div`
   .form-container {
     display: grid;
     grid-template-columns: 1fr;
-    /* grid-template-rows: 1fr 2fr 1fr 1fr 1fr; */
   }
   .alert {
     text-align: center;

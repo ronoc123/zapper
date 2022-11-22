@@ -628,9 +628,9 @@ const reducer = (state, action) => {
     return {
       ...state,
       isLoading: false,
-      singleProject: action.payload,
+      singleTicket: action.payload,
       showAlert: true,
-      alertText: "Project Edit Successful",
+      alertText: "Ticket Edit Successful",
     };
   }
 

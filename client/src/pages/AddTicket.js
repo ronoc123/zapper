@@ -49,7 +49,7 @@ const AddTicket = () => {
 
   return (
     <Wrapper className="full-page">
-      <form className="form-container" onSubmit={onSubmit}>
+      <form className="form-container">
         <h1 className="title">New Ticket!</h1>
         {showAlert && <Alert />}
         <div className="input-container">
@@ -89,7 +89,7 @@ const AddTicket = () => {
             handleChange={handleTicketInput}
             list={ticket_type_options}
           />
-          <div type="submit" className="position">
+          <div onClick={onSubmit} className="position">
             <ContainedButtons
               name={"Add Ticket"}
               styled={"small"}

@@ -185,6 +185,9 @@ const Wrapper = styled.div`
     cursor: pointer;
     padding-bottom: 0.5rem;
   }
+  .edit-btn {
+    cursor: pointer;
+  }
 
   @media screen and (max-width: 1400px) {
     .project-container {

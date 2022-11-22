@@ -8,7 +8,8 @@ import Project from "../components/Project.js";
 import ContainedButtons from "../components/Button.js";
 
 const SingleProjectPage = () => {
-  let { id } = useParams();
+  let { id: projectId } = useParams();
+
   const {
     fetchTicketsOnProject,
     fetchSingleProject,
@@ -19,16 +20,16 @@ const SingleProjectPage = () => {
   } = useAppContext();
 
   useEffect(() => {
-    fetchSingleProject(id);
-    fetchTicketsOnProject(id);
-    fetchUsersOnProject(id);
+    fetchSingleProject(projectId);
+    fetchTicketsOnProject(projectId);
+    fetchUsersOnProject(projectId);
   }, []);
   return (
     <Wrapper className="full-page">
       <Project />
       <div className="title-1">
         <h1 className="title-text">Tickets on {singleProject[0]?.title}</h1>
-        <Link to={`/addticket/${id}`} className="position">
+        <Link to={`/addticket/${projectId}`} className="position">
           <ContainedButtons
             name={"Add Ticket"}
             styled={"large"}
@@ -45,9 +46,9 @@ const SingleProjectPage = () => {
           <div className="ticket-devs">Links</div>
         </div>
         {projectTicket.length > 0 ? (
-          projectTicket.map((project) => {
-            const { id } = project;
-            return <Ticket key={id} {...project} />;
+          projectTicket.map((ticket) => {
+            const { id } = ticket;
+            return <Ticket key={id} {...ticket} projectId={projectId} />;
           })
         ) : (
           <h1 className="no-title">No Tickets...</h1>

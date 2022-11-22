@@ -5,6 +5,7 @@ import FormRow from "../components/FormRow";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import FormRowSelect from "../components/FormRowSelect";
 import Alert from "../components/Alert";
+import ContainedButtons from "../components/Button";
 
 const ManageRole = () => {
   const {
@@ -44,8 +45,6 @@ const ManageRole = () => {
 
     const { username, user_role, email, id } = values;
 
-    console.log(username, user_role, email, id);
-
     if (!username || !user_role || !email || !id) {
       displayAlert();
       return;
@@ -60,7 +59,6 @@ const ManageRole = () => {
   const handleTicketInput = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    console.log(name);
 
     handleChange({ name, value });
   };
@@ -71,7 +69,19 @@ const ManageRole = () => {
   }, [adminEdit[0]?.user_name, adminEdit[0]?.email, adminEdit[0]?.user_role]);
 
   return (
-    <Wrapper className="full-page">
+    <Wrapper>
+      <form className="search-container">
+        <FormRow
+          type="text"
+          name="searchDev"
+          value={searchDev}
+          handleChange={handleTicketInput}
+          labelText=" "
+        />
+        <div onClick={searchSubmit} className="button-container">
+          <ContainedButtons name={"Submit"} styled={"large"}></ContainedButtons>
+        </div>
+      </form>
       <div className="container">
         <div className="user-search-container">
           <form className="single-user-container" onSubmit={editSubmit}>
@@ -100,24 +110,14 @@ const ManageRole = () => {
               handleChange={handleUserChange}
               list={["user", "manager", "admin"]}
             />
-            <h3>User ID : {values?.id}</h3>
             <div className="btns">
-              <button type="submit" className="edit-btn">
-                Save Changes
-              </button>
+              <div type="submit" className="save-btn">
+                <ContainedButtons
+                  name={"Save Changes"}
+                  styled={"medium"}
+                ></ContainedButtons>
+              </div>
             </div>
-          </form>
-          <form className="search-container" onSubmit={searchSubmit}>
-            <FormRow
-              type="text"
-              name="searchDev"
-              value={searchDev}
-              handleChange={handleTicketInput}
-              labelText="Search"
-            />
-            <button className="search-btn" type="submit">
-              Search
-            </button>
           </form>
         </div>
         <div className="user-info-container">
@@ -126,30 +126,42 @@ const ManageRole = () => {
               ? projectDevOptions.map((dev) => {
                   return (
                     <div
-                      className="dev-btn"
-                      // type="submit"
                       key={dev.user_id}
                       onClick={() => {
                         devSubmit(dev.user_id);
                       }}
+                      className="user-row"
                     >
-                      <AiOutlineUserAdd />
-                      <span className="span-text">{dev.user_name}</span>
+                      <div className="icon">
+                        <div className="letter">
+                          {dev.user_name[0].toUpperCase()}
+                        </div>
+                      </div>
+                      <div className="dev-btn" key={dev.user_id}>
+                        <AiOutlineUserAdd />
+                        <div className="span-text">{dev.user_name}</div>
+                      </div>
                     </div>
                   );
                 })
               : filtered_project_dev_options.map((dev) => {
                   return (
                     <div
-                      className="dev-btn"
-                      // type="submit"
+                      className="user-row"
                       key={dev.user_id}
                       onClick={() => {
                         devSubmit(dev.user_id);
                       }}
                     >
-                      <AiOutlineUserAdd className="icon" />
-                      <span className="span-text">{dev.user_name}</span>
+                      <div className="icon">
+                        <div className="letter">
+                          {dev.user_name[0].toUpperCase()}
+                        </div>
+                      </div>
+                      <div className="dev-btn" key={dev.user_id}>
+                        <AiOutlineUserAdd />
+                        <div className="span-text">{dev.user_name}</div>
+                      </div>
                     </div>
                   );
                 })}

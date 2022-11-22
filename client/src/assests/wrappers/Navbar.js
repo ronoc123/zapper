@@ -44,24 +44,30 @@ const Wrapper = styled.nav`
 
   .link {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    width: 100%;
+    grid-template-columns: repeat(1, auto);
     align-items: center;
     padding-right: 2.5rem;
     gap: 1rem;
     transition: var(--transition);
   }
-
-  .link:hover {
-    background: #87888a;
-    .icon {
-      color: var(--clr-primary-3);
-    }
-    .text {
-      color: white;
-    }
+  .link-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    gap: 1rem;
+    transition: var(--transition);
+    padding-right: 2rem;
   }
-  .text {
-    color: #545d63;
+  .link-container:hover {
+    background: #edf3fc;
+    border-radius: 0.5rem;
+  }
+
+  .selected {
+    background: #edf3fc;
+    border-radius: 0.5rem;
   }
 
   .about {
