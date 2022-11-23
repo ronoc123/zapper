@@ -23,6 +23,15 @@
   --max-width: 1170px;
   --bodyFont: Monospace;
 }
+.show {
+  transform: translateY(30.5rem);
+}
+/* input:focus {
+  border: 1px solid #1670be;
+  box-shadow: 0 0 3px #1670be;
+  outline-offset: 0px;
+  outline: none;
+} */
 
 /* #33b121 */
 /* #d3ffe9 */
@@ -103,4 +112,10 @@ a {
 
 ::-webkit-scrollbar-track {
   background-color: lightgrey;
+}
+
+@media screen and (max-width: 1100px) {
+  .show {
+    display: none;
+  }
 }

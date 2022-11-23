@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Wrapper = styled.nav`
   height: 7rem;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1.5fr 2fr 1.5fr;
   background: var(--clr-primary-3);
   padding-left: 3rem;
   margin-bottom: 1rem;
@@ -79,7 +79,7 @@ const Wrapper = styled.nav`
 
   .user-info {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
   }
   .item-1:hover {
@@ -91,15 +91,18 @@ const Wrapper = styled.nav`
 
   .profile-link {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     color: #545d63;
     font-size: 1.2rem;
+
+    place-items: center;
   }
 
   .name {
     color: black;
     font-size: 1.3rem;
     padding-left: 0.5rem;
+    justify-self: left;
   }
   .icon-1 {
     font-size: 2rem;

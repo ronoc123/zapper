@@ -12,7 +12,6 @@ const Wrapper = styled.div`
     background: var(--clr-primary-5);
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-
     max-height: 70vh;
   }
   .user-search-container {
@@ -30,6 +29,7 @@ const Wrapper = styled.div`
     overflow: scroll;
     overflow-x: hidden;
     box-shadow: var(--dark-shadow);
+    margin-bottom: 5rem;
   }
   .single-user-container {
     border-radius: 0.5rem;
