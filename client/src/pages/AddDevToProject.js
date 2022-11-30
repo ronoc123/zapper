@@ -71,13 +71,7 @@ const AddDevToProject = () => {
           {/* Dev Assigned BEGIN */}
           <div className="dev-assigned-container">
             <h3 className="dev-title">Developers Assigned</h3>
-            {devOnSingleProject.length === 0 ? (
-              <p className="paragraph">
-                Select a developer to add to the project...
-              </p>
-            ) : (
-              ""
-            )}
+
             <div className="name-container">
               {devOnSingleProject?.map((dev, index) => {
                 return (
