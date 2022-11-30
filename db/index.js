@@ -13,12 +13,12 @@ const devConfig = {
 
 const proConfig = process.env.DATABASE_URL;
 
-// const pool = new Pool({
-//   connectionString:
-//     process.env.NODE_ENV === "production" ? proConfig : devConfig,
-//   ssl: { rejectUnauthorized: false },
-// });
-const pool = new Pool();
+const pool = new Pool({
+  connectionString:
+    process.env.NODE_ENV === "production" ? proConfig : devConfig,
+  ssl: { rejectUnauthorized: false },
+});
+// const pool = new Pool();
 export default {
   query: (text, params) => pool.query(text, params),
 };
