@@ -26,6 +26,8 @@ const Wrapper = styled.div`
   }
   .description {
     font-size: 1rem;
+    overflow: hidden;
+    overflow-wrap: break-word;
   }
   .heading-title {
     text-align: center;
@@ -34,7 +36,8 @@ const Wrapper = styled.div`
 
   .project-container {
     background: white;
-    max-height: 80%;
+    max-height: 40rem;
+    /* overflow: scroll; */
     align-self: flex-start;
     justify-self: center;
     display: grid;
@@ -46,6 +49,7 @@ const Wrapper = styled.div`
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-top: 4px solid black;
     border-radius: 0.5rem;
+    margin-bottom: 5rem;
   }
 
   .project:nth-child(even) {
@@ -127,6 +131,7 @@ const Wrapper = styled.div`
     margin-right: 4rem;
     .project {
       display: grid;
+
       grid-template-columns: 1fr 2fr 1fr;
       column-gap: 1rem;
       padding-left: 1rem;
@@ -160,6 +165,7 @@ const Wrapper = styled.div`
 
       font-size: 1rem;
     }
+
     .big-screen {
       display: none;
     }

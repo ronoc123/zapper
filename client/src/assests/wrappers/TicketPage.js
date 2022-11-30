@@ -107,11 +107,12 @@ const Wrapper = styled.div`
     overflow: scroll;
     overflow-x: hidden;
     grid-auto-rows: 4rem;
-    max-height: 60%;
+    max-height: 30rem;
     text-align: start;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
     border-top: 1px solid black;
     background: white;
+    margin-bottom: 5rem;
   }
   .ticket {
     display: grid;

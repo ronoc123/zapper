@@ -30,6 +30,8 @@ const Wrapper = styled.div`
   .title {
     display: grid;
     justify-self: center;
+    width: 100%;
+    text-align: center;
   }
   .position {
     border: none;

@@ -9,6 +9,7 @@ const Wrapper = styled.nav`
   margin-bottom: 1rem;
   border-top: 1px solid #dfe6ed;
   border-bottom: 1px solid #dfe6ed;
+
   .center {
     display: flex;
     align-items: center;
@@ -79,7 +80,7 @@ const Wrapper = styled.nav`
 
   .user-info {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     align-items: center;
   }
   .item-1:hover {
@@ -94,7 +95,7 @@ const Wrapper = styled.nav`
     grid-template-columns: 1fr 2fr;
     color: #545d63;
     font-size: 1.2rem;
-
+    justify-self: center;
     place-items: center;
   }
 

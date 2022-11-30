@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import FormRow from "../components/FormRow";
 import { AiOutlineUserAdd } from "react-icons/ai";
+import ContainedButtons from "../components/Button";
 
 const AddDevToProject = () => {
   const [search, setSearch] = useState(false);
@@ -25,6 +26,7 @@ const AddDevToProject = () => {
 
   const devSubmit = (userId) => {
     addToProject(id, userId);
+    getDevsOnSingleProject(id);
   };
   const searchSubmit = (e) => {
     e.preventDefault();
@@ -46,16 +48,41 @@ const AddDevToProject = () => {
 
   return (
     <Wrapper className="full-page">
+      {/* Search Bar BEGIN */}
+      <form className="search-container">
+        <FormRow
+          type="text"
+          name="searchDev"
+          value={searchDev}
+          handleChange={handleUserInput}
+          labelText=" "
+        />
+        <ContainedButtons
+          name={"Search"}
+          func={searchSubmit}
+        ></ContainedButtons>
+        {/* <button className="search-btn" type="submit">
+          Search
+        </button> */}
+      </form>
+      {/* Search Bar END */}
       <div className="container">
         <div className="users-assigned-container">
           {/* Dev Assigned BEGIN */}
           <div className="dev-assigned-container">
             <h3 className="dev-title">Developers Assigned</h3>
+            {devOnSingleProject.length === 0 ? (
+              <p className="paragraph">
+                Select a developer to add to the project...
+              </p>
+            ) : (
+              ""
+            )}
             <div className="name-container">
               {devOnSingleProject?.map((dev, index) => {
                 return (
                   <span key={index} className="dev-name">
-                    {dev} <br />
+                    {dev.length > 10 ? `${dev.substring(0, 10)}...` : dev}
                   </span>
                 );
               })}
@@ -63,58 +90,44 @@ const AddDevToProject = () => {
           </div>
           {/* DEV Assigned END */}
         </div>
-        <div className="dev-container">
-          {/* Search Bar BEGIN */}
-          <form className="search-container" onSubmit={searchSubmit}>
-            <FormRow
-              type="text"
-              name="searchDev"
-              value={searchDev}
-              handleChange={handleUserInput}
-              labelText="Search"
-            />
-            <button className="search-btn" type="submit">
-              Search
-            </button>
-          </form>
-          {/* Search Bar END */}
-          {/* Dev Option BEGIN */}
-          <form className="option-container">
-            {!search
-              ? projectDevOptions.map((dev) => {
-                  return (
-                    <button
-                      className="dev-btn"
-                      type="submit"
-                      key={dev.user_id}
-                      onClick={() => {
-                        devSubmit(dev.user_id);
-                      }}
-                    >
-                      <AiOutlineUserAdd />
-                      <span className="span-text">{dev.user_name}</span>
-                    </button>
-                  );
-                })
-              : filtered_project_dev_options.map((dev) => {
-                  return (
-                    <button
-                      className="dev-btn"
-                      type="submit"
-                      key={dev.user_id}
-                      onClick={() => {
-                        devSubmit();
-                      }}
-                    >
-                      <AiOutlineUserAdd className="icon" />
-                      <span className="span-text">{dev.user_name}</span>
-                    </button>
-                  );
-                })}
-          </form>
-          {/* Dev Option END */}
-        </div>
+        {/* <div className="dev-container"> */}
+        {/* Dev Option BEGIN */}
+        <form className="option-container">
+          {!search
+            ? projectDevOptions.map((dev) => {
+                return (
+                  <div
+                    className="dev-btn"
+                    type="submit"
+                    key={dev.user_id}
+                    onClick={() => {
+                      devSubmit(dev.user_id);
+                    }}
+                  >
+                    <AiOutlineUserAdd />
+                    <span className="span-text">{dev.user_name}</span>
+                  </div>
+                );
+              })
+            : filtered_project_dev_options.map((dev) => {
+                return (
+                  <div
+                    className="dev-btn"
+                    type="submit"
+                    key={dev.user_id}
+                    onClick={() => {
+                      devSubmit(dev.user_id);
+                    }}
+                  >
+                    <AiOutlineUserAdd className="icon" />
+                    <span className="span-text">{dev.user_name}</span>
+                  </div>
+                );
+              })}
+        </form>
+        {/* Dev Option END */}
       </div>
+      {/* </div> */}
     </Wrapper>
   );
 };

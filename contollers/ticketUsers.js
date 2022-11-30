@@ -12,8 +12,6 @@ const addUserToTicket = async (req, res) => {
   );
   const project_id = projectInfo.rows[0].project_id;
 
-  console.log(project_id);
-
   await db.query(
     "INSERT INTO ticket_interactions(userID, ticketID, projectID) VALUES($1, $2, $3)",
     [user_id, ticket_id, project_id]
