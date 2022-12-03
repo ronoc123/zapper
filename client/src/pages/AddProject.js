@@ -31,7 +31,7 @@ const AddProject = () => {
   };
 
   return (
-    <Wrapper className="full-page">
+    <Wrapper>
       <form className="form-container">
         <h1 className="title">New Project!</h1>
         {showAlert && <Alert />}

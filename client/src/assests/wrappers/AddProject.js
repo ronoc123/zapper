@@ -5,26 +5,21 @@ const Wrapper = styled.div`
   justify-content: center;
   padding-top: 2rem;
   .form-container {
-    width: 30vw;
-    height: 50vh;
     background: var(--clr-primary-3);
     display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 5rem auto;
-    min-height: 28rem;
-    min-width: 20rem;
+    max-width: 25rem;
+    min-width: 23rem;
+    min-height: 25rem;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 0.5rem;
   }
   .input-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     row-gap: 1rem;
-    /* min-width: 20rem; */
-    /* border: 2px solid red; */
   }
 
   .title {
@@ -70,9 +65,13 @@ const Wrapper = styled.div`
   }
   .description {
     height: 5rem;
+    font-size: 1rem;
   }
   .form-input {
-    padding-left: 0.5rem;
+    padding: 0.2rem;
+  }
+  .form-input:focus {
+    outline: none;
   }
 
   .alert {

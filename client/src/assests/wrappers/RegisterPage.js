@@ -18,7 +18,6 @@ const Wrapper = styled.section`
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-self: left;
-    height: 55vh;
     width: 25vw;
     background: var(--clr-white);
     border-radius: 0.5rem;
@@ -26,6 +25,11 @@ const Wrapper = styled.section`
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     min-height: 30rem;
     min-width: 25rem;
+  }
+  .form {
+    display: grid;
+    place-items: center;
+    min-height: 30rem;
   }
   .demo-btn {
     background: var(--clr-primary-5);
@@ -44,7 +48,7 @@ const Wrapper = styled.section`
     border-top: 0.5rem solid var(--clr-primary-1);
     display: grid;
     width: 40vw;
-    height: 55vh;
+
     align-items: center;
     justify-content: center;
     max-width: 450px;
@@ -54,15 +58,17 @@ const Wrapper = styled.section`
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     min-height: 30rem;
     min-width: 20rem;
-    transition: var(--transition);
     text-align: center;
     padding-top: 2rem;
     justify-self: right;
   }
 
+  .paragraph {
+    margin-bottom: 1rem;
+  }
+
   .form {
     margin-top: -2rem;
-    /* border: 2px solid red; */
   }
 
   .form-row {
@@ -70,8 +76,11 @@ const Wrapper = styled.section`
   }
 
   .form-container:hover {
-    /* transform: scale(1.009); */
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+  }
+  .position {
+    justify-self: center;
+    margin-bottom: 1rem;
   }
 
   .title {
@@ -100,9 +109,7 @@ const Wrapper = styled.section`
   }
 
   .logo {
-    /* position: absolute;
-    top: 1.5rem;
-    left: 1.5rem; */
+    /* margin-top: 1rem; */
   }
   span {
     padding-left: 1.5rem;
@@ -115,6 +122,7 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
   }
 
   .login-btn {
@@ -123,7 +131,7 @@ const Wrapper = styled.section`
     color: white;
     text-transform: uppercase;
     font-size: 1.2rem;
-    /* align-self: center; */
+
     transition: var(--transition);
     margin: 1rem 0;
   }
@@ -144,6 +152,7 @@ const Wrapper = styled.section`
 
   .alert {
     font-size: 1.2rem;
+    padding: 0.5rem;
   }
 
   .alert-fail {
@@ -167,8 +176,8 @@ const Wrapper = styled.section`
     row-gap: 5rem;
     .demo-container {
       justify-self: center;
-      height: 55vh;
-      width: 25vw;
+      /* height: 55vh; */
+      /* width: 25vw; */
       background: var(--clr-white);
       border-radius: 0.5rem;
       background: white;
@@ -179,8 +188,8 @@ const Wrapper = styled.section`
     .form-container {
       border-top: 0.5rem solid var(--clr-primary-1);
       display: grid;
-      width: 40vw;
-      height: 55vh;
+      /* width: 40vw; */
+      /* height: 55vh; */
       justify-self: center;
       max-width: 450px;
       position: relative;

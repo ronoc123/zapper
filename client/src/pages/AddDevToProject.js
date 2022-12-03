@@ -26,7 +26,9 @@ const AddDevToProject = () => {
 
   const devSubmit = (userId) => {
     addToProject(id, userId);
-    getDevsOnSingleProject(id);
+    setTimeout(() => {
+      getDevsOnSingleProject(id);
+    }, 50);
   };
   const searchSubmit = (e) => {
     e.preventDefault();

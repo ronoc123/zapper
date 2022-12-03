@@ -31,7 +31,11 @@ const Navbar = () => {
         </Link>
         <Link to="/profile" className="profile-link">
           <FaUserCircle className="icon-1" />
-          <div className="name">{user[0]?.user_name || "User"}</div>
+          <div className="name">
+            {user[0]?.user_name.length > 10
+              ? `${user[0]?.user_name.substring(0, 12)}...`
+              : user[0]?.user_name}
+          </div>
         </Link>
         <div className="position">
           <ContainedButtons

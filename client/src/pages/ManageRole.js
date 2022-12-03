@@ -84,7 +84,7 @@ const ManageRole = () => {
       </form>
       <div className="container">
         <div className="user-search-container">
-          <form className="single-user-container" onSubmit={editSubmit}>
+          <form className="single-user-container">
             <div className="heading">
               <h2 className="user-title">User Information</h2>
               <Alert />
@@ -111,7 +111,7 @@ const ManageRole = () => {
               list={["user", "manager", "admin"]}
             />
             <div className="btns">
-              <div type="submit" className="save-btn">
+              <div onClick={editSubmit} className="save-btn">
                 <ContainedButtons
                   name={"Save Changes"}
                   styled={"medium"}

@@ -6,6 +6,7 @@ import { Logo } from "../components/index.js";
 import { useState, useEffect } from "react";
 import { useAppContext } from "../context/appContext.js";
 import { useNavigate } from "react-router-dom";
+import ContainedButtons from "../components/Button.js";
 
 const initialState = {
   name: "",
@@ -84,31 +85,39 @@ const Register = () => {
           </div>
           <h3 className="title">{values.isMember ? "Login" : "Register"}</h3>
           {showAlert && <Alert />}
-          {!values.isMember && (
+          <div>
+            {!values.isMember && (
+              <FormRow
+                type="name"
+                name="name"
+                value={values.name}
+                handleChange={handleChange}
+              />
+            )}
             <FormRow
-              type="name"
-              name="name"
-              value={values.name}
+              type="email"
+              name="email"
+              value={values.email}
               handleChange={handleChange}
             />
-          )}
-          <FormRow
-            type="email"
-            name="email"
-            value={values.email}
-            handleChange={handleChange}
-          />
-          {/* name input */}
-          <FormRow
-            type="password"
-            name="password"
-            value={values.password}
-            handleChange={handleChange}
-          />
-          <button className="btn login-btn" type="submit" disabled={isLoading}>
-            {values.isMember ? "Login" : "Register"}
-          </button>
-          <p>
+            {/* name input */}
+            <FormRow
+              type="password"
+              name="password"
+              value={values.password}
+              handleChange={handleChange}
+            />
+          </div>
+
+          <div className="position">
+            <ContainedButtons
+              func={onSubmit}
+              name={values.isMember ? "Login" : "Register"}
+              styled="large"
+            ></ContainedButtons>
+          </div>
+
+          <p className="paragraph">
             {values.isMember ? "Not a member yet? " : " Already a member? "}
             <button className="member-btn" type="button" onClick={toggleMember}>
               {values.isMember ? "Register" : "Login"}

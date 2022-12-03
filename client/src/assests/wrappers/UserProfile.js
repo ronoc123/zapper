@@ -2,23 +2,19 @@ import styled from "styled-components";
 
 const Wrapper = styled.div`
   display: grid;
-  justify-content: center;
-  align-items: center;
-
+  place-items: center;
   .form-container {
     display: grid;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    grid-template-rows: 1fr;
     background: white;
     border-radius: var(--radius);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin-top: 5rem;
+    max-width: 25rem;
+    min-height: 25rem;
+    width: 90%;
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
   }
-  .profile-container {
-    margin-top: 2.5rem;
-    justify-self: center;
-    text-align: center;
-  }
+
   .form-row {
     display: grid;
     text-align: left;
@@ -33,33 +29,17 @@ const Wrapper = styled.div`
     margin-top: 1rem;
   }
   .form-input {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: var(--radius);
-    padding-left: 0.5rem;
-  }
-  .role {
-    text-align: center;
-  }
-  .submit-btn {
-    margin-top: 1rem;
-    background: var(--clr-primary-1);
-    color: white;
-    font-size: 1.2rem;
-    transition: var(--transition);
-    padding-bottom: 0.7rem;
-    margin-bottom: 4rem;
+    padding-left: 0.2rem;
   }
 
-  .submit-btn:hover {
-    font-size: 1.25rem;
-    cursor: pointer;
-  }
-  .password-btn {
-    display: block;
-    margin-top: 1rem;
-  }
   .alert {
     text-align: center;
+  }
+  .save-btn {
+    justify-self: center;
+    margin-top: 2rem;
   }
 `;
 

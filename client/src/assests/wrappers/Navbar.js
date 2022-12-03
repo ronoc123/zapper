@@ -80,7 +80,7 @@ const Wrapper = styled.nav`
 
   .user-info {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 1.5fr 1fr;
     align-items: center;
   }
   .item-1:hover {

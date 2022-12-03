@@ -563,6 +563,7 @@ const reducer = (state, action) => {
   if (action.type === ADD_DEV_PROJECT_SUCCESS) {
     return {
       ...state,
+
       isLoading: false,
     };
   }
